@@ -1,0 +1,14 @@
+<div class="card h-100 my-3" style="width: 18rem">
+	<img src="{{pet.photo_url}}" class="card-img-top" alt="" />
+	<div class="card-body bg-light">
+		<h5 class="card-title">{{pet.name}}</h5>
+		{% if pet.notes %}
+		<p class="card-text">{{pet.notes}}</p>
+		{% else %}
+		<i class="card-text text-secondary">There are no notes for {{pet.name}}.</i>
+		{% endif %}
+	</div>
+	<div class="card-footer text-center">
+		<a href="/{{pet.id}}" class="btn btn-primary">Edit Pet</a>
+	</div>
+</div>

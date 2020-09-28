@@ -1,0 +1,19 @@
+<div class="card my-3 h-100" style="width: 18rem">
+	<img src="{{pet.photo_url}}" class="card-img-top" alt="" />
+	<div class="card-body bg-light">
+		<h5 class="card-title">
+			{{pet.name}}
+			<b class="text-success">Available!</b>
+		</h5>
+		{% if pet.notes %}
+		<p class="card-text" style="height: 6rem; overflow-x: scroll; width: 100%">
+			{{pet.notes}}
+		</p>
+		{% else %}
+		<i class="card-text text-secondary">There are no notes for {{pet.name}}.</i>
+		{% endif %}
+	</div>
+	<div class="card-footer text-center">
+		<a href="/{{pet.id}}" class="btn btn-primary">Edit Pet</a>
+	</div>
+</div>
